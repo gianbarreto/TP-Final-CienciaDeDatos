@@ -1,12 +1,12 @@
 # Sistema Recomendador - Trabajo Final Integrador
 
-Este repositorio contiene la implementación de un sistema recomendador de películas desarrollado bajo la metodología **CRISP-DM**.
+Este repositorio contiene la implementación de un sistema recomendador de películas.
 
-## Descripción del Trabajo
+## Descripción
 
 El sistema busca resolver dos escenarios clave del negocio:
 
-1.  **Usuarios Nuevos (Cold Start):** Se utiliza un enfoque **Basado en Conocimiento/Contenido**. Al no existir historial de transacciones, el sistema utiliza preferencias explícitas (Géneros y Décadas) declaradas por el usuario al registrarse para calcular un puntaje de afinidad.
+1.  **Usuarios Nuevos (Cold Start):** Se utiliza un enfoque **Basado en Contenido**. Al no existir historial de transacciones, el sistema utiliza preferencias explícitas (Géneros y Décadas) declaradas por el usuario al registrarse para calcular un puntaje de afinidad.
 2.  **Usuarios Recurrentes:** Se utiliza **Filtrado Colaborativo Basado en Ítems**. Se analiza el historial de compras para encontrar patrones ocultos y recomendar ítems similares a los ya adquiridos, utilizando la **Similitud del Coseno** sobre una matriz de interacciones.
 
 ## Tecnologías Utilizadas
@@ -56,7 +56,7 @@ Dado que no hay una base de datos preexistente, la generamos:
 
 ## Ejecución de la API
 
-Una vez generados los datos, inicia el servidor de desarrollo:
+Una vez generados los datos, iniciar el servidor de desarrollo:
 
 ```bash
 uvicorn main:app --reload
