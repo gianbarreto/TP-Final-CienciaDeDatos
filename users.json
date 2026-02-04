@@ -1,0 +1,974 @@
+[
+    {
+        "id": 101,
+        "username": "user_1",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Music",
+                    "Thriller",
+                    "Sci-Fi"
+                ],
+                "decades": [
+                    1980,
+                    2020
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 95,
+                "rating": 4
+            },
+            {
+                "item_id": 14,
+                "rating": 1
+            },
+            {
+                "item_id": 87,
+                "rating": 3
+            },
+            {
+                "item_id": 70,
+                "rating": 4
+            },
+            {
+                "item_id": 12,
+                "rating": 1
+            },
+            {
+                "item_id": 76,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "username": "user_2",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Western",
+                    "War",
+                    "Comedy"
+                ],
+                "decades": [
+                    1970,
+                    1980
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 55,
+                "rating": 4
+            },
+            {
+                "item_id": 44,
+                "rating": 3
+            },
+            {
+                "item_id": 36,
+                "rating": 3
+            },
+            {
+                "item_id": 20,
+                "rating": 1
+            },
+            {
+                "item_id": 28,
+                "rating": 4
+            },
+            {
+                "item_id": 98,
+                "rating": 2
+            },
+            {
+                "item_id": 14,
+                "rating": 5
+            },
+            {
+                "item_id": 12,
+                "rating": 2
+            },
+            {
+                "item_id": 49,
+                "rating": 3
+            },
+            {
+                "item_id": 13,
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "username": "user_3",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Action",
+                    "Biography"
+                ],
+                "decades": [
+                    2020
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 99,
+                "rating": 3
+            },
+            {
+                "item_id": 38,
+                "rating": 4
+            },
+            {
+                "item_id": 11,
+                "rating": 4
+            },
+            {
+                "item_id": 30,
+                "rating": 4
+            },
+            {
+                "item_id": 13,
+                "rating": 3
+            },
+            {
+                "item_id": 49,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "username": "user_4",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Biography",
+                    "Drama",
+                    "Crime"
+                ],
+                "decades": [
+                    1980
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 49,
+                "rating": 5
+            },
+            {
+                "item_id": 35,
+                "rating": 5
+            },
+            {
+                "item_id": 82,
+                "rating": 3
+            },
+            {
+                "item_id": 89,
+                "rating": 1
+            },
+            {
+                "item_id": 72,
+                "rating": 3
+            },
+            {
+                "item_id": 29,
+                "rating": 3
+            },
+            {
+                "item_id": 88,
+                "rating": 3
+            },
+            {
+                "item_id": 42,
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "username": "user_5",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Mystery",
+                    "Action",
+                    "Horror"
+                ],
+                "decades": [
+                    2000,
+                    2020
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 34,
+                "rating": 3
+            },
+            {
+                "item_id": 18,
+                "rating": 4
+            },
+            {
+                "item_id": 32,
+                "rating": 5
+            },
+            {
+                "item_id": 96,
+                "rating": 4
+            },
+            {
+                "item_id": 72,
+                "rating": 3
+            },
+            {
+                "item_id": 69,
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 106,
+        "username": "user_6",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Comedy",
+                    "Biography",
+                    "Family"
+                ],
+                "decades": [
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 81,
+                "rating": 4
+            },
+            {
+                "item_id": 21,
+                "rating": 4
+            },
+            {
+                "item_id": 88,
+                "rating": 4
+            },
+            {
+                "item_id": 55,
+                "rating": 3
+            },
+            {
+                "item_id": 77,
+                "rating": 4
+            },
+            {
+                "item_id": 9,
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "username": "user_7",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Music",
+                    "Crime",
+                    "Family"
+                ],
+                "decades": [
+                    1970,
+                    1990
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 21,
+                "rating": 4
+            },
+            {
+                "item_id": 59,
+                "rating": 2
+            },
+            {
+                "item_id": 1,
+                "rating": 4
+            },
+            {
+                "item_id": 93,
+                "rating": 5
+            },
+            {
+                "item_id": 34,
+                "rating": 4
+            },
+            {
+                "item_id": 65,
+                "rating": 3
+            },
+            {
+                "item_id": 98,
+                "rating": 4
+            },
+            {
+                "item_id": 23,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 108,
+        "username": "user_8",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Thriller",
+                    "Mystery",
+                    "War"
+                ],
+                "decades": [
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 40,
+                "rating": 5
+            },
+            {
+                "item_id": 31,
+                "rating": 5
+            },
+            {
+                "item_id": 8,
+                "rating": 4
+            },
+            {
+                "item_id": 73,
+                "rating": 2
+            },
+            {
+                "item_id": 11,
+                "rating": 4
+            },
+            {
+                "item_id": 94,
+                "rating": 5
+            },
+            {
+                "item_id": 63,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "username": "user_9",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Western",
+                    "Action",
+                    "Fantasy"
+                ],
+                "decades": [
+                    2020
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 52,
+                "rating": 2
+            },
+            {
+                "item_id": 86,
+                "rating": 3
+            },
+            {
+                "item_id": 84,
+                "rating": 3
+            },
+            {
+                "item_id": 48,
+                "rating": 4
+            },
+            {
+                "item_id": 57,
+                "rating": 3
+            },
+            {
+                "item_id": 67,
+                "rating": 3
+            },
+            {
+                "item_id": 58,
+                "rating": 2
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "username": "user_10",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Animation",
+                    "War",
+                    "Horror"
+                ],
+                "decades": [
+                    1990
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 66,
+                "rating": 3
+            },
+            {
+                "item_id": 31,
+                "rating": 2
+            },
+            {
+                "item_id": 36,
+                "rating": 5
+            },
+            {
+                "item_id": 86,
+                "rating": 4
+            },
+            {
+                "item_id": 63,
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "username": "user_11",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Western",
+                    "Action"
+                ],
+                "decades": [
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 56,
+                "rating": 2
+            },
+            {
+                "item_id": 46,
+                "rating": 4
+            },
+            {
+                "item_id": 55,
+                "rating": 3
+            },
+            {
+                "item_id": 53,
+                "rating": 5
+            },
+            {
+                "item_id": 60,
+                "rating": 3
+            },
+            {
+                "item_id": 94,
+                "rating": 3
+            },
+            {
+                "item_id": 7,
+                "rating": 4
+            },
+            {
+                "item_id": 87,
+                "rating": 4
+            },
+            {
+                "item_id": 84,
+                "rating": 3
+            },
+            {
+                "item_id": 83,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "username": "user_12",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Fantasy"
+                ],
+                "decades": [
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 70,
+                "rating": 5
+            },
+            {
+                "item_id": 2,
+                "rating": 5
+            },
+            {
+                "item_id": 12,
+                "rating": 3
+            },
+            {
+                "item_id": 97,
+                "rating": 1
+            },
+            {
+                "item_id": 31,
+                "rating": 4
+            },
+            {
+                "item_id": 22,
+                "rating": 5
+            },
+            {
+                "item_id": 53,
+                "rating": 5
+            },
+            {
+                "item_id": 63,
+                "rating": 3
+            },
+            {
+                "item_id": 62,
+                "rating": 4
+            },
+            {
+                "item_id": 28,
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "username": "user_13",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Comedy",
+                    "Adventure",
+                    "Music"
+                ],
+                "decades": [
+                    1980,
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 95,
+                "rating": 5
+            },
+            {
+                "item_id": 70,
+                "rating": 4
+            },
+            {
+                "item_id": 8,
+                "rating": 2
+            },
+            {
+                "item_id": 96,
+                "rating": 4
+            },
+            {
+                "item_id": 41,
+                "rating": 5
+            },
+            {
+                "item_id": 7,
+                "rating": 2
+            },
+            {
+                "item_id": 75,
+                "rating": 2
+            },
+            {
+                "item_id": 62,
+                "rating": 5
+            },
+            {
+                "item_id": 65,
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "username": "user_14",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "War",
+                    "Animation",
+                    "Romance"
+                ],
+                "decades": [
+                    2000
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 75,
+                "rating": 2
+            },
+            {
+                "item_id": 73,
+                "rating": 4
+            },
+            {
+                "item_id": 67,
+                "rating": 4
+            },
+            {
+                "item_id": 41,
+                "rating": 5
+            },
+            {
+                "item_id": 34,
+                "rating": 5
+            },
+            {
+                "item_id": 27,
+                "rating": 1
+            },
+            {
+                "item_id": 86,
+                "rating": 4
+            },
+            {
+                "item_id": 92,
+                "rating": 4
+            },
+            {
+                "item_id": 31,
+                "rating": 2
+            },
+            {
+                "item_id": 51,
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "username": "user_15",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Crime",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "decades": [
+                    1970,
+                    1980
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 37,
+                "rating": 5
+            },
+            {
+                "item_id": 21,
+                "rating": 5
+            },
+            {
+                "item_id": 57,
+                "rating": 4
+            },
+            {
+                "item_id": 70,
+                "rating": 4
+            },
+            {
+                "item_id": 91,
+                "rating": 4
+            },
+            {
+                "item_id": 39,
+                "rating": 5
+            },
+            {
+                "item_id": 79,
+                "rating": 2
+            }
+        ]
+    },
+    {
+        "id": 116,
+        "username": "user_16",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Crime"
+                ],
+                "decades": [
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 71,
+                "rating": 5
+            },
+            {
+                "item_id": 20,
+                "rating": 4
+            },
+            {
+                "item_id": 35,
+                "rating": 3
+            },
+            {
+                "item_id": 37,
+                "rating": 5
+            },
+            {
+                "item_id": 78,
+                "rating": 2
+            },
+            {
+                "item_id": 27,
+                "rating": 4
+            },
+            {
+                "item_id": 92,
+                "rating": 5
+            },
+            {
+                "item_id": 44,
+                "rating": 1
+            },
+            {
+                "item_id": 88,
+                "rating": 3
+            },
+            {
+                "item_id": 82,
+                "rating": 2
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "username": "user_17",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Drama",
+                    "Fantasy"
+                ],
+                "decades": [
+                    2010,
+                    1970
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 10,
+                "rating": 5
+            },
+            {
+                "item_id": 89,
+                "rating": 4
+            },
+            {
+                "item_id": 20,
+                "rating": 2
+            },
+            {
+                "item_id": 70,
+                "rating": 2
+            },
+            {
+                "item_id": 5,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 118,
+        "username": "user_18",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Sci-Fi"
+                ],
+                "decades": [
+                    2020
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 86,
+                "rating": 5
+            },
+            {
+                "item_id": 14,
+                "rating": 5
+            },
+            {
+                "item_id": 46,
+                "rating": 5
+            },
+            {
+                "item_id": 100,
+                "rating": 3
+            },
+            {
+                "item_id": 72,
+                "rating": 3
+            },
+            {
+                "item_id": 53,
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 119,
+        "username": "user_19",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Western"
+                ],
+                "decades": [
+                    1980
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 43,
+                "rating": 5
+            },
+            {
+                "item_id": 53,
+                "rating": 5
+            },
+            {
+                "item_id": 86,
+                "rating": 3
+            },
+            {
+                "item_id": 95,
+                "rating": 5
+            },
+            {
+                "item_id": 32,
+                "rating": 4
+            },
+            {
+                "item_id": 35,
+                "rating": 3
+            },
+            {
+                "item_id": 21,
+                "rating": 5
+            },
+            {
+                "item_id": 90,
+                "rating": 3
+            },
+            {
+                "item_id": 14,
+                "rating": 1
+            },
+            {
+                "item_id": 49,
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "username": "user_20",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Crime",
+                    "Biography"
+                ],
+                "decades": [
+                    1990,
+                    2010
+                ]
+            }
+        },
+        "history": [
+            {
+                "item_id": 87,
+                "rating": 5
+            },
+            {
+                "item_id": 69,
+                "rating": 3
+            },
+            {
+                "item_id": 43,
+                "rating": 2
+            },
+            {
+                "item_id": 4,
+                "rating": 4
+            },
+            {
+                "item_id": 15,
+                "rating": 5
+            },
+            {
+                "item_id": 34,
+                "rating": 3
+            },
+            {
+                "item_id": 23,
+                "rating": 4
+            },
+            {
+                "item_id": 75,
+                "rating": 4
+            }
+        ]
+    }
+]
