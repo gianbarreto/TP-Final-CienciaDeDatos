@@ -66,8 +66,7 @@ uvicorn main:app --reload
 
 **Prueba 1: Usuario Nuevo**
 
-Endpoint POST /user
-Copia y pega este JSON en el cuerpo de la petición:
+En el Endpoint POST /user copiar y pegar este JSON:
 
 ```bash
 {
