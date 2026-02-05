@@ -60,3 +60,29 @@ Una vez generados los datos, iniciar el servidor de desarrollo:
 
 ```bash
 uvicorn main:app --reload
+```
+
+## Guía de Prueba
+
+**Prueba 1: Usuario Nuevo**
+
+Endpoint POST /user
+Copia y pega este JSON en el cuerpo de la petición:
+
+```bash
+{
+  "username": "user_test",
+  "attributes": {
+    "preferences": {
+      "genres": ["Sci-Fi"],
+      "decades": [1980]
+    }
+  }
+}
+```
+
+Para verificar las recomendaciones para este nuevo usuario, usamos el Endpoint GET /user/{user_id}/recommend (Reemplazar {user_id} con el ID que se recibió al crear el nuevo usuario).
+
+**Prueba 2: Usuario Recurrente**
+
+En el Endpoint GET /user/{user_id}/recommend podemos usar cualquier user_id desde 101 a 120, debido a que son los usuarios ya precargados que tienen un historial de transacciones.
