@@ -62,6 +62,8 @@ Una vez generados los datos, iniciar el servidor de desarrollo:
 uvicorn main:app --reload
 ```
 
+Una vez corriendo la API, se ingresa por este enlace: http://127.0.0.1:8000/docs
+
 ## Guía de Prueba
 
 **Prueba 1: Usuario Nuevo**
