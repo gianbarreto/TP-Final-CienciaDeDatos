@@ -218,7 +218,7 @@ def recommend(user_id: int, n: int = 5):
                 "genres": row['genres'],
                 "decade": row['decade'],
                 "rating": row['vote_average'],
-                "match_score": round(score, 2) # Dato útil para debug
+                "match_score": round(score, 2)
             }
         )
         result_items.append(item)

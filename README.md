@@ -1,6 +1,10 @@
-# Sistema Recomendador - Trabajo Final Integrador
+# Sistema Recomendador - Trabajo Final Integrador - Ciencia de Datos - UTN FRCU
 
-Este repositorio contiene la implementación de un sistema recomendador de películas.
+Este proyecto implementa un sistema de recomendaciones híbrido diseñado bajo la metodología CRISP-DM. El objetivo principal es optimizar las ventas de una plataforma con un catálogo estático de 100 películas, reemplazando la selección aleatoria por sugerencias personalizadas.
+
+## Integrantes
+Arlettaz, Joaquin.   
+Barreto, Gian Marco.   
 
 ## Descripción
 
@@ -13,7 +17,7 @@ El sistema busca resolver dos escenarios clave del negocio:
 
 * **Lenguaje:** Python 3.10+
 * **API Framework:** FastAPI (Uvicorn).
-* **Procesamiento de Datos:** Pandas (Manipulación de DataFrames).
+* **Procesamiento de Datos:** Panda, Numpy.
 * **Machine Learning:** Scikit-learn (Cálculo de matrices de similitud y distancia del coseno).
 * **Persistencia:** JSON y CSV (Simulación de base de datos NoSQL y catálogo estático).
 
@@ -24,13 +28,13 @@ Seguir estos pasos para ejecutar el proyecto en tu entorno local:
 1.  **Clonar el repositorio:**
     ```bash
     git clone https://github.com/gianbarreto/TP-Final-CienciaDeDatos.git
-    cd tp-ciencia-datos
+    cd Tp-Final-CienciaDeDatos
     ```
 
 2.  **Crear y activar entorno virtual:**
     ```bash
     python -m venv .venv
-    source .venv/bin/activate  # En Windows: .venv\Scripts\activate
+    source .venv/bin/activate  # Para Linux/Mac, En Windows se realiza via: .venv\Scripts\activate
     ```
 
 3.  **Instalar dependencias:**
@@ -43,16 +47,16 @@ Seguir estos pasos para ejecutar el proyecto en tu entorno local:
 Dado que no hay una base de datos preexistente, la generamos:
 
 1.  **Generar Catálogo de Películas:**
-    Crea el archivo `movies_dataset.csv` con 100 ítems, incluyendo atributos como género, década y keywords.
     ```bash
     python data_gen.py
     ```
+    Crea el archivo `movies_dataset.csv` con 100 ítems, incluyendo atributos como género, década y keywords.
 
 2.  **Generar Usuarios:**
-    Crea el archivo `users.json` con 20 usuarios iniciales, sus preferencias y transacciones pasadas.
     ```bash
     python users_gen.py
     ```
+    Crea el archivo `users.json` con 20 usuarios iniciales, sus preferencias y transacciones pasadas.
 
 ## Ejecución de la API
 
