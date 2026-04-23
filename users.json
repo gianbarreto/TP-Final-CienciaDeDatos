@@ -5,40 +5,44 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Music",
-                    "Thriller",
+                    "Action",
                     "Sci-Fi"
                 ],
                 "decades": [
-                    1980,
-                    2020
+                    1990,
+                    1980
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 95,
+                "item_id": 85,
+                "rating": 5
+            },
+            {
+                "item_id": 77,
+                "rating": 5
+            },
+            {
+                "item_id": 26,
                 "rating": 4
             },
             {
-                "item_id": 14,
-                "rating": 1
-            },
-            {
-                "item_id": 87,
-                "rating": 3
-            },
-            {
-                "item_id": 70,
+                "item_id": 75,
                 "rating": 4
             },
             {
-                "item_id": 12,
-                "rating": 1
+                "item_id": 72,
+                "rating": 5
             },
             {
-                "item_id": 76,
-                "rating": 3
+                "item_id": 42,
+                "rating": 5
+            },
+            {
+                "item_id": 96,
+                "rating": 4
             }
         ]
     },
@@ -48,56 +52,48 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Western",
-                    "War",
-                    "Comedy"
+                    "Mystery",
+                    "Thriller"
                 ],
                 "decades": [
-                    1970,
-                    1980
+                    1980,
+                    1970
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 55,
+                "item_id": 4,
                 "rating": 4
             },
             {
-                "item_id": 44,
-                "rating": 3
-            },
-            {
-                "item_id": 36,
-                "rating": 3
-            },
-            {
-                "item_id": 20,
-                "rating": 1
-            },
-            {
-                "item_id": 28,
-                "rating": 4
-            },
-            {
-                "item_id": 98,
-                "rating": 2
-            },
-            {
-                "item_id": 14,
+                "item_id": 39,
                 "rating": 5
             },
             {
-                "item_id": 12,
+                "item_id": 80,
                 "rating": 2
             },
             {
-                "item_id": 49,
-                "rating": 3
+                "item_id": 67,
+                "rating": 1
             },
             {
-                "item_id": 13,
+                "item_id": 79,
+                "rating": 5
+            },
+            {
+                "item_id": 97,
+                "rating": 1
+            },
+            {
+                "item_id": 84,
                 "rating": 4
+            },
+            {
+                "item_id": 16,
+                "rating": 2
             }
         ]
     },
@@ -107,38 +103,52 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Action",
-                    "Biography"
+                    "Biography",
+                    "Drama"
                 ],
                 "decades": [
-                    2020
+                    1990,
+                    2000
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 99,
-                "rating": 3
-            },
-            {
-                "item_id": 38,
-                "rating": 4
-            },
-            {
-                "item_id": 11,
-                "rating": 4
-            },
-            {
-                "item_id": 30,
-                "rating": 4
-            },
-            {
-                "item_id": 13,
-                "rating": 3
+                "item_id": 93,
+                "rating": 5
             },
             {
                 "item_id": 49,
-                "rating": 3
+                "rating": 5
+            },
+            {
+                "item_id": 32,
+                "rating": 5
+            },
+            {
+                "item_id": 45,
+                "rating": 1
+            },
+            {
+                "item_id": 80,
+                "rating": 5
+            },
+            {
+                "item_id": 97,
+                "rating": 5
+            },
+            {
+                "item_id": 78,
+                "rating": 2
+            },
+            {
+                "item_id": 34,
+                "rating": 5
+            },
+            {
+                "item_id": 82,
+                "rating": 5
             }
         ]
     },
@@ -148,46 +158,47 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Biography",
-                    "Drama",
-                    "Crime"
+                    "Mystery",
+                    "Horror"
                 ],
                 "decades": [
-                    1980
+                    1980,
+                    1990
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 49,
+                "item_id": 3,
                 "rating": 5
             },
             {
-                "item_id": 35,
+                "item_id": 13,
                 "rating": 5
             },
             {
-                "item_id": 82,
-                "rating": 3
+                "item_id": 4,
+                "rating": 4
             },
             {
-                "item_id": 89,
-                "rating": 1
+                "item_id": 52,
+                "rating": 5
             },
             {
-                "item_id": 72,
-                "rating": 3
+                "item_id": 6,
+                "rating": 2
             },
             {
-                "item_id": 29,
-                "rating": 3
+                "item_id": 65,
+                "rating": 5
             },
             {
-                "item_id": 88,
-                "rating": 3
+                "item_id": 36,
+                "rating": 4
             },
             {
-                "item_id": 42,
+                "item_id": 31,
                 "rating": 5
             }
         ]
@@ -198,39 +209,63 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Mystery",
-                    "Action",
-                    "Horror"
+                    "Biography",
+                    "Drama"
                 ],
                 "decades": [
-                    2000,
-                    2020
+                    2010,
+                    2000
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 34,
-                "rating": 3
-            },
-            {
-                "item_id": 18,
+                "item_id": 86,
                 "rating": 4
             },
             {
-                "item_id": 32,
+                "item_id": 25,
                 "rating": 5
             },
             {
-                "item_id": 96,
+                "item_id": 74,
+                "rating": 5
+            },
+            {
+                "item_id": 71,
                 "rating": 4
             },
             {
-                "item_id": 72,
+                "item_id": 95,
                 "rating": 3
             },
             {
-                "item_id": 69,
+                "item_id": 34,
+                "rating": 5
+            },
+            {
+                "item_id": 8,
+                "rating": 3
+            },
+            {
+                "item_id": 88,
+                "rating": 2
+            },
+            {
+                "item_id": 99,
+                "rating": 5
+            },
+            {
+                "item_id": 35,
+                "rating": 5
+            },
+            {
+                "item_id": 31,
+                "rating": 5
+            },
+            {
+                "item_id": 30,
                 "rating": 5
             }
         ]
@@ -241,39 +276,44 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Comedy",
-                    "Biography",
-                    "Family"
+                    "Mystery",
+                    "Thriller"
                 ],
                 "decades": [
+                    2010,
                     1970
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 81,
+                "item_id": 36,
                 "rating": 4
             },
             {
-                "item_id": 21,
+                "item_id": 69,
                 "rating": 4
             },
             {
-                "item_id": 88,
+                "item_id": 79,
                 "rating": 4
             },
             {
-                "item_id": 55,
-                "rating": 3
-            },
-            {
-                "item_id": 77,
-                "rating": 4
-            },
-            {
-                "item_id": 9,
+                "item_id": 3,
                 "rating": 5
+            },
+            {
+                "item_id": 29,
+                "rating": 4
+            },
+            {
+                "item_id": 65,
+                "rating": 4
+            },
+            {
+                "item_id": 97,
+                "rating": 2
             }
         ]
     },
@@ -283,48 +323,40 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Music",
-                    "Crime",
-                    "Family"
+                    "Romance",
+                    "Biography"
                 ],
                 "decades": [
-                    1970,
-                    1990
+                    1990,
+                    2010
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 21,
-                "rating": 4
-            },
-            {
-                "item_id": 59,
-                "rating": 2
-            },
-            {
-                "item_id": 1,
-                "rating": 4
-            },
-            {
-                "item_id": 93,
+                "item_id": 52,
                 "rating": 5
             },
             {
-                "item_id": 34,
+                "item_id": 13,
+                "rating": 5
+            },
+            {
+                "item_id": 9,
+                "rating": 1
+            },
+            {
+                "item_id": 19,
                 "rating": 4
             },
             {
                 "item_id": 65,
-                "rating": 3
-            },
-            {
-                "item_id": 98,
                 "rating": 4
             },
             {
-                "item_id": 23,
-                "rating": 3
+                "item_id": 66,
+                "rating": 4
             }
         ]
     },
@@ -334,43 +366,56 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Thriller",
-                    "Mystery",
-                    "War"
+                    "Sci-Fi",
+                    "Action"
                 ],
                 "decades": [
-                    1970
+                    1980,
+                    2010
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 40,
+                "item_id": 15,
+                "rating": 3
+            },
+            {
+                "item_id": 24,
+                "rating": 2
+            },
+            {
+                "item_id": 53,
                 "rating": 5
             },
             {
-                "item_id": 31,
+                "item_id": 2,
                 "rating": 5
             },
             {
-                "item_id": 8,
+                "item_id": 95,
+                "rating": 5
+            },
+            {
+                "item_id": 86,
+                "rating": 5
+            },
+            {
+                "item_id": 70,
+                "rating": 2
+            },
+            {
+                "item_id": 22,
                 "rating": 4
             },
             {
                 "item_id": 73,
-                "rating": 2
-            },
-            {
-                "item_id": 11,
-                "rating": 4
-            },
-            {
-                "item_id": 94,
-                "rating": 5
-            },
-            {
-                "item_id": 63,
                 "rating": 3
+            },
+            {
+                "item_id": 45,
+                "rating": 4
             }
         ]
     },
@@ -380,43 +425,36 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Western",
-                    "Action",
-                    "Fantasy"
+                    "Thriller",
+                    "Horror"
                 ],
                 "decades": [
-                    2020
+                    1970,
+                    2010
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 52,
-                "rating": 2
-            },
-            {
-                "item_id": 86,
-                "rating": 3
-            },
-            {
                 "item_id": 84,
-                "rating": 3
+                "rating": 5
             },
             {
-                "item_id": 48,
+                "item_id": 69,
                 "rating": 4
             },
             {
-                "item_id": 57,
-                "rating": 3
+                "item_id": 74,
+                "rating": 4
             },
             {
-                "item_id": 67,
-                "rating": 3
-            },
-            {
-                "item_id": 58,
+                "item_id": 38,
                 "rating": 2
+            },
+            {
+                "item_id": 31,
+                "rating": 4
             }
         ]
     },
@@ -426,35 +464,52 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Animation",
-                    "War",
-                    "Horror"
+                    "Family",
+                    "Comedy"
                 ],
                 "decades": [
-                    1990
+                    1990,
+                    2020
                 ]
-            }
+            },
+            "archetype": "Family_Animation_Parent"
         },
         "history": [
             {
-                "item_id": 66,
-                "rating": 3
-            },
-            {
-                "item_id": 31,
-                "rating": 2
-            },
-            {
-                "item_id": 36,
+                "item_id": 70,
                 "rating": 5
             },
             {
-                "item_id": 86,
-                "rating": 4
+                "item_id": 24,
+                "rating": 5
             },
             {
-                "item_id": 63,
-                "rating": 4
+                "item_id": 44,
+                "rating": 5
+            },
+            {
+                "item_id": 65,
+                "rating": 1
+            },
+            {
+                "item_id": 67,
+                "rating": 5
+            },
+            {
+                "item_id": 94,
+                "rating": 5
+            },
+            {
+                "item_id": 98,
+                "rating": 5
+            },
+            {
+                "item_id": 19,
+                "rating": 3
+            },
+            {
+                "item_id": 15,
+                "rating": 5
             }
         ]
     },
@@ -464,54 +519,56 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Western",
-                    "Action"
+                    "Romance",
+                    "Biography"
                 ],
                 "decades": [
-                    1970
+                    2010,
+                    1990
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 56,
-                "rating": 2
-            },
-            {
-                "item_id": 46,
-                "rating": 4
-            },
-            {
-                "item_id": 55,
-                "rating": 3
-            },
-            {
-                "item_id": 53,
+                "item_id": 100,
                 "rating": 5
             },
             {
-                "item_id": 60,
-                "rating": 3
-            },
-            {
-                "item_id": 94,
-                "rating": 3
-            },
-            {
-                "item_id": 7,
+                "item_id": 71,
                 "rating": 4
             },
             {
-                "item_id": 87,
+                "item_id": 6,
+                "rating": 1
+            },
+            {
+                "item_id": 40,
                 "rating": 4
             },
             {
-                "item_id": 84,
-                "rating": 3
+                "item_id": 23,
+                "rating": 5
+            },
+            {
+                "item_id": 65,
+                "rating": 5
+            },
+            {
+                "item_id": 1,
+                "rating": 4
             },
             {
                 "item_id": 83,
                 "rating": 3
+            },
+            {
+                "item_id": 54,
+                "rating": 5
+            },
+            {
+                "item_id": 12,
+                "rating": 5
             }
         ]
     },
@@ -521,53 +578,40 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Fantasy"
+                    "Biography",
+                    "Drama"
                 ],
                 "decades": [
-                    1970
+                    2010,
+                    1990
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 70,
+                "item_id": 59,
                 "rating": 5
             },
             {
-                "item_id": 2,
+                "item_id": 34,
                 "rating": 5
             },
             {
-                "item_id": 12,
-                "rating": 3
-            },
-            {
-                "item_id": 97,
+                "item_id": 92,
                 "rating": 1
             },
             {
-                "item_id": 31,
+                "item_id": 27,
+                "rating": 5
+            },
+            {
+                "item_id": 19,
                 "rating": 4
             },
             {
-                "item_id": 22,
-                "rating": 5
-            },
-            {
-                "item_id": 53,
-                "rating": 5
-            },
-            {
-                "item_id": 63,
-                "rating": 3
-            },
-            {
-                "item_id": 62,
+                "item_id": 70,
                 "rating": 4
-            },
-            {
-                "item_id": 28,
-                "rating": 5
             }
         ]
     },
@@ -577,52 +621,40 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Comedy",
-                    "Adventure",
-                    "Music"
+                    "Mystery",
+                    "Thriller"
                 ],
                 "decades": [
                     1980,
                     1970
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 95,
-                "rating": 5
-            },
-            {
-                "item_id": 70,
-                "rating": 4
-            },
-            {
-                "item_id": 8,
-                "rating": 2
-            },
-            {
-                "item_id": 96,
-                "rating": 4
-            },
-            {
                 "item_id": 41,
-                "rating": 5
-            },
-            {
-                "item_id": 7,
-                "rating": 2
-            },
-            {
-                "item_id": 75,
-                "rating": 2
-            },
-            {
-                "item_id": 62,
-                "rating": 5
-            },
-            {
-                "item_id": 65,
                 "rating": 4
+            },
+            {
+                "item_id": 50,
+                "rating": 2
+            },
+            {
+                "item_id": 84,
+                "rating": 5
+            },
+            {
+                "item_id": 1,
+                "rating": 4
+            },
+            {
+                "item_id": 32,
+                "rating": 2
+            },
+            {
+                "item_id": 9,
+                "rating": 1
             }
         ]
     },
@@ -632,55 +664,48 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "War",
-                    "Animation",
-                    "Romance"
+                    "Mystery",
+                    "Crime"
                 ],
                 "decades": [
-                    2000
+                    1990,
+                    1980
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 75,
+                "item_id": 22,
                 "rating": 2
             },
             {
-                "item_id": 73,
+                "item_id": 31,
                 "rating": 4
             },
             {
-                "item_id": 67,
-                "rating": 4
-            },
-            {
-                "item_id": 41,
+                "item_id": 64,
                 "rating": 5
+            },
+            {
+                "item_id": 84,
+                "rating": 4
             },
             {
                 "item_id": 34,
                 "rating": 5
             },
             {
-                "item_id": 27,
-                "rating": 1
+                "item_id": 36,
+                "rating": 5
             },
             {
-                "item_id": 86,
+                "item_id": 11,
                 "rating": 4
             },
             {
-                "item_id": 92,
-                "rating": 4
-            },
-            {
-                "item_id": 31,
-                "rating": 2
-            },
-            {
-                "item_id": 51,
-                "rating": 4
+                "item_id": 41,
+                "rating": 5
             }
         ]
     },
@@ -690,44 +715,48 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Crime",
-                    "Adventure",
-                    "Fantasy"
+                    "Biography",
+                    "Romance"
                 ],
                 "decades": [
-                    1970,
-                    1980
+                    2000,
+                    1990
                 ]
-            }
+            },
+            "archetype": "Drama_Romance_Lover"
         },
         "history": [
             {
-                "item_id": 37,
+                "item_id": 64,
                 "rating": 5
             },
             {
-                "item_id": 21,
+                "item_id": 49,
                 "rating": 5
             },
             {
-                "item_id": 57,
+                "item_id": 31,
+                "rating": 5
+            },
+            {
+                "item_id": 25,
+                "rating": 5
+            },
+            {
+                "item_id": 99,
+                "rating": 5
+            },
+            {
+                "item_id": 34,
+                "rating": 5
+            },
+            {
+                "item_id": 30,
                 "rating": 4
             },
             {
                 "item_id": 70,
-                "rating": 4
-            },
-            {
-                "item_id": 91,
-                "rating": 4
-            },
-            {
-                "item_id": 39,
                 "rating": 5
-            },
-            {
-                "item_id": 79,
-                "rating": 2
             }
         ]
     },
@@ -737,53 +766,60 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Crime"
+                    "Sci-Fi",
+                    "Adventure"
                 ],
                 "decades": [
-                    1970
+                    1990,
+                    2010
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 71,
+                "item_id": 53,
+                "rating": 4
+            },
+            {
+                "item_id": 2,
+                "rating": 5
+            },
+            {
+                "item_id": 19,
+                "rating": 3
+            },
+            {
+                "item_id": 96,
+                "rating": 5
+            },
+            {
+                "item_id": 6,
                 "rating": 5
             },
             {
                 "item_id": 20,
-                "rating": 4
-            },
-            {
-                "item_id": 35,
-                "rating": 3
-            },
-            {
-                "item_id": 37,
-                "rating": 5
-            },
-            {
-                "item_id": 78,
                 "rating": 2
             },
             {
-                "item_id": 27,
-                "rating": 4
+                "item_id": 93,
+                "rating": 2
             },
             {
-                "item_id": 92,
+                "item_id": 45,
                 "rating": 5
             },
             {
-                "item_id": 44,
-                "rating": 1
-            },
-            {
-                "item_id": 88,
+                "item_id": 79,
                 "rating": 3
             },
             {
-                "item_id": 82,
-                "rating": 2
+                "item_id": 58,
+                "rating": 3
+            },
+            {
+                "item_id": 17,
+                "rating": 5
             }
         ]
     },
@@ -793,34 +829,43 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Drama",
-                    "Fantasy"
+                    "Crime",
+                    "Thriller"
                 ],
                 "decades": [
-                    2010,
-                    1970
+                    1980,
+                    1990
                 ]
-            }
+            },
+            "archetype": "Horror_Thriller_Fan"
         },
         "history": [
             {
-                "item_id": 10,
+                "item_id": 64,
                 "rating": 5
             },
             {
-                "item_id": 89,
+                "item_id": 52,
                 "rating": 4
             },
             {
-                "item_id": 20,
-                "rating": 2
+                "item_id": 31,
+                "rating": 4
             },
             {
-                "item_id": 70,
-                "rating": 2
+                "item_id": 17,
+                "rating": 1
             },
             {
-                "item_id": 5,
+                "item_id": 93,
+                "rating": 4
+            },
+            {
+                "item_id": 49,
+                "rating": 5
+            },
+            {
+                "item_id": 68,
                 "rating": 3
             }
         ]
@@ -831,37 +876,40 @@
         "attributes": {
             "preferences": {
                 "genres": [
+                    "Adventure",
                     "Sci-Fi"
                 ],
                 "decades": [
-                    2020
+                    2020,
+                    1980
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 86,
+                "item_id": 51,
                 "rating": 5
             },
             {
-                "item_id": 14,
+                "item_id": 52,
+                "rating": 2
+            },
+            {
+                "item_id": 96,
                 "rating": 5
             },
             {
-                "item_id": 46,
-                "rating": 5
-            },
-            {
-                "item_id": 100,
-                "rating": 3
-            },
-            {
-                "item_id": 72,
-                "rating": 3
+                "item_id": 33,
+                "rating": 4
             },
             {
                 "item_id": 53,
                 "rating": 5
+            },
+            {
+                "item_id": 21,
+                "rating": 3
             }
         ]
     },
@@ -871,53 +919,44 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Western"
+                    "Action",
+                    "Sci-Fi"
                 ],
                 "decades": [
-                    1980
+                    1990,
+                    2020
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 43,
-                "rating": 5
-            },
-            {
-                "item_id": 53,
-                "rating": 5
-            },
-            {
-                "item_id": 86,
-                "rating": 3
-            },
-            {
-                "item_id": 95,
-                "rating": 5
-            },
-            {
-                "item_id": 32,
+                "item_id": 51,
                 "rating": 4
             },
             {
-                "item_id": 35,
-                "rating": 3
-            },
-            {
-                "item_id": 21,
+                "item_id": 46,
                 "rating": 5
             },
             {
-                "item_id": 90,
-                "rating": 3
+                "item_id": 91,
+                "rating": 5
             },
             {
-                "item_id": 14,
-                "rating": 1
+                "item_id": 100,
+                "rating": 4
             },
             {
-                "item_id": 49,
-                "rating": 3
+                "item_id": 72,
+                "rating": 4
+            },
+            {
+                "item_id": 29,
+                "rating": 2
+            },
+            {
+                "item_id": 83,
+                "rating": 4
             }
         ]
     },
@@ -927,48 +966,97 @@
         "attributes": {
             "preferences": {
                 "genres": [
-                    "Crime",
-                    "Biography"
+                    "Action",
+                    "Adventure"
                 ],
                 "decades": [
-                    1990,
+                    1980,
                     2010
                 ]
-            }
+            },
+            "archetype": "Nerd_SciFi_Action"
         },
         "history": [
             {
-                "item_id": 87,
+                "item_id": 61,
                 "rating": 5
             },
             {
-                "item_id": 69,
-                "rating": 3
-            },
-            {
-                "item_id": 43,
-                "rating": 2
-            },
-            {
-                "item_id": 4,
-                "rating": 4
-            },
-            {
-                "item_id": 15,
+                "item_id": 26,
                 "rating": 5
             },
             {
-                "item_id": 34,
-                "rating": 3
-            },
-            {
-                "item_id": 23,
+                "item_id": 50,
                 "rating": 4
             },
             {
-                "item_id": 75,
+                "item_id": 89,
+                "rating": 5
+            },
+            {
+                "item_id": 17,
+                "rating": 5
+            },
+            {
+                "item_id": 3,
+                "rating": 5
+            },
+            {
+                "item_id": 51,
                 "rating": 4
             }
         ]
+    },
+    {
+        "id": 0,
+        "username": "testtt",
+        "attributes": {
+            "preferences": {
+                "genres": [],
+                "decades": []
+            },
+            "extra": {}
+        },
+        "history": []
+    },
+    {
+        "id": 10,
+        "username": "testtt",
+        "attributes": {
+            "preferences": {
+                "genres": [],
+                "decades": []
+            },
+            "extra": {}
+        },
+        "history": []
+    },
+    {
+        "id": 11,
+        "username": "testtea",
+        "attributes": {
+            "preferences": {
+                "genres": [],
+                "decades": []
+            },
+            "extra": {}
+        },
+        "history": []
+    },
+    {
+        "id": 121,
+        "username": "testteea",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Crime"
+                ],
+                "decades": [
+                    1990
+                ]
+            },
+            "extra": {}
+        },
+        "history": []
     }
 ]

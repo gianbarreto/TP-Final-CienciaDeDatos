@@ -1,10 +1,42 @@
 import json
 import pandas as pd
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+import os
+from fastapi import FastAPI, HTTPException, BackgroundTasks
+from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+
+# --- MODELOS DE DATOS (ESTRICTOS) ---
+
+class UserPreferences(BaseModel):
+    # Obligamos a que la lista exista y tenga al menos 1 elemento
+    genres: List[str] = Field(..., min_length=1, description="Debe ingresar al menos un género")
+    decades: List[int] = Field(..., min_length=1, description="Debe ingresar al menos una década")
+
+class UserAttributes(BaseModel):
+    preferences: UserPreferences 
+    extra: Dict[str, Any] = {} 
+
+class User(BaseModel):
+    id: Optional[int] = None # Opcional para que el backend lo asigne
+    username: str
+    attributes: UserAttributes
+
+class Item(BaseModel):
+    id: int
+    name: str
+    attributes: Dict[str, Any]
+
+class ItemArray(BaseModel):
+    items: List[Item]
+
+class RatingCreate(BaseModel):
+    item_id: int
+    rating: float = Field(..., ge=1, le=5, description="El rating debe estar entre 1 y 5")
+
+
+# --- CONFIGURACIÓN DE LA API ---
 
 app = FastAPI(
     title="Sistema Recomendador - PeliMovies",
@@ -16,32 +48,21 @@ movies_df = None
 users_db = []
 item_similarity_df = pd.DataFrame()
 
-MOVIES_FILE = 'movies_dataset.csv'
-USERS_FILE = 'users.json'
+# Rutas de archivos
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MOVIES_FILE = os.path.join(BASE_DIR, 'movies_dataset.csv')
+USERS_FILE = os.path.join(BASE_DIR, 'users.json')
 
-class UserPreferences(BaseModel):
-    genres: List[str] = []
-    decades: List[int] = []
+# Variables de optimización
+new_interactions_count = 0
+TRAIN_THRESHOLD = 5  # Parametro, luego de 5 iteraciones, recalcula
 
-class UserAttributes(BaseModel):
-    preferences: Optional[UserPreferences] = None
-    extra: Dict[str, Any] = {} 
 
-class User(BaseModel):
-    id: Optional[int] = None
-    username: str
-    attributes: Optional[UserAttributes] = None
-
-class Item(BaseModel):
-    id: int
-    name: str
-    attributes: Dict[str, Any]
-
-class ItemArray(BaseModel):
-    items: List[Item]
+# --- LÓGICA DEL RECOMENDADOR ---
 
 def train_model():
     global item_similarity_df
+    print("Iniciando reentrenamiento de la matriz de similitud...")
     
     interactions = []
     for user in users_db:
@@ -75,7 +96,7 @@ def train_model():
         columns=item_user_matrix.index
     )
     
-    print(f"Matriz de similitud: {item_similarity_df.shape}")
+    print(f"Matriz de similitud actualizada: {item_similarity_df.shape}")
 
 def recommend_cold_start(user_prefs: dict, n: int) -> pd.DataFrame:
     candidates = movies_df.copy()
@@ -132,10 +153,12 @@ def recommend_collaborative(history: List[dict], n: int) -> pd.DataFrame:
          return movies_df[~movies_df['id'].isin(watched_ids)].sort_values(by='vote_average', ascending=False).head(n)
 
     recommendations = pd.DataFrame(list(scores.items()), columns=['id', 'score'])
-    
     recommendations = recommendations.merge(movies_df, on='id')
     
     return recommendations.sort_values(by='score', ascending=False).head(n)
+
+
+# --- EVENTOS Y ENDPOINTS ---
 
 @app.on_event("startup")
 def startup_event():
@@ -170,7 +193,7 @@ def create_user(user: User):
     else:
         user.id = (max([u['id'] for u in users_db]) if users_db else 0) + 1
 
-    new_user = user.dict()
+    new_user = user.model_dump() if hasattr(user, 'model_dump') else user.dict()
     new_user['history'] = []
     users_db.append(new_user)
     
@@ -186,6 +209,36 @@ def get_user(user_id: int):
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
+@app.post("/user/{user_id}/rating", tags=["Sistema recomendador"])
+def add_rating(user_id: int, rating_data: RatingCreate, background_tasks: BackgroundTasks):
+    global users_db, new_interactions_count
+
+    user = next((u for u in users_db if u['id'] == user_id), None)
+    if not user:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+
+    if rating_data.item_id not in movies_df['id'].values:
+        raise HTTPException(status_code=404, detail="La película no existe en el catálogo")
+
+    history = user.get('history', [])
+    existing_rating = next((item for item in history if item['item_id'] == rating_data.item_id), None)
+    
+    if existing_rating:
+        existing_rating['rating'] = rating_data.rating
+    else:
+        history.append({"item_id": rating_data.item_id, "rating": rating_data.rating})
+        user['history'] = history
+
+    with open(USERS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(users_db, f, indent=4)
+
+    new_interactions_count += 1
+    if new_interactions_count >= TRAIN_THRESHOLD:
+        background_tasks.add_task(train_model)
+        new_interactions_count = 0  
+
+    return {"message": "Rating guardado exitosamente", "current_interactions_pending": new_interactions_count}
+
 @app.get("/user/{user_id}/recommend", response_model=ItemArray, tags=["Sistema recomendador"])
 def recommend(user_id: int, n: int = 5):
     user = next((u for u in users_db if u['id'] == user_id), None)
@@ -194,6 +247,8 @@ def recommend(user_id: int, n: int = 5):
     
     history = user.get('history', [])
     
+    n_model = n - 1 if n > 1 else n
+
     if not history:
         user_attrs = user.get('attributes', {})
         prefs = {}
@@ -202,14 +257,28 @@ def recommend(user_id: int, n: int = 5):
         elif user_attrs and isinstance(user_attrs, dict):
              prefs = user_attrs.get('preferences', {})
         
-        result_df = recommend_cold_start(prefs, n)
-        
+        result_df = recommend_cold_start(prefs, n_model)
     else:
-        result_df = recommend_collaborative(history, n)
+        result_df = recommend_collaborative(history, n_model)
+
+    result_df['is_serendipity'] = False 
+
+    if n > 1:
+        watched_ids = [item['item_id'] for item in history] if history else []
+        recommended_ids = result_df['id'].tolist()
+        exclusion_list = set(watched_ids + recommended_ids)
+
+        available_randoms = movies_df[~movies_df['id'].isin(exclusion_list)].copy()
+        
+        if not available_randoms.empty:
+            random_item = available_randoms.sample(n=1)
+            random_item['is_serendipity'] = True 
+            result_df = pd.concat([result_df, random_item])
 
     result_items = []
     for _, row in result_df.iterrows():
         score = row['score'] if 'score' in row else row['vote_average']
+        is_serend = (row['is_serendipity'] == True)
         
         item = Item(
             id=row['id'],
@@ -218,7 +287,8 @@ def recommend(user_id: int, n: int = 5):
                 "genres": row['genres'],
                 "decade": row['decade'],
                 "rating": row['vote_average'],
-                "match_score": round(score, 2)
+                "match_score": "Aleatorio" if is_serend else round(score, 2),
+                "serendipity": is_serend
             }
         )
         result_items.append(item)
