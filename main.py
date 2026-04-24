@@ -55,7 +55,7 @@ USERS_FILE = os.path.join(BASE_DIR, 'users.json')
 
 # Variables de optimización
 new_interactions_count = 0
-TRAIN_THRESHOLD = 5  # Parametro, luego de 5 iteraciones, recalcula
+TRAIN_THRESHOLD = 3  # Parametro, luego de estas iteraciones, recalcula
 
 
 # --- LÓGICA DEL RECOMENDADOR ---

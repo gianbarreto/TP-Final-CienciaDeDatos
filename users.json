@@ -1058,5 +1058,68 @@
             "extra": {}
         },
         "history": []
+    },
+    {
+        "id": 122,
+        "username": "TEST-RECOM",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Drama"
+                ],
+                "decades": [
+                    1990
+                ]
+            },
+            "extra": {}
+        },
+        "history": [
+            {
+                "item_id": 21,
+                "rating": 4.0
+            }
+        ]
+    },
+    {
+        "id": 123,
+        "username": "TEST-RECOM2",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Drama"
+                ],
+                "decades": [
+                    1990
+                ]
+            },
+            "extra": {}
+        },
+        "history": [
+            {
+                "item_id": 21,
+                "rating": 4.0
+            }
+        ]
+    },
+    {
+        "id": 124,
+        "username": "TEST-RECOM-03",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Drama"
+                ],
+                "decades": [
+                    1990
+                ]
+            },
+            "extra": {}
+        },
+        "history": [
+            {
+                "item_id": 21,
+                "rating": 4.0
+            }
+        ]
     }
 ]
