@@ -1121,5 +1121,30 @@
                 "rating": 4.0
             }
         ]
+    },
+    {
+        "id": 125,
+        "username": "test-rating-bajo",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Drama"
+                ],
+                "decades": [
+                    1990
+                ]
+            },
+            "extra": {}
+        },
+        "history": [
+            {
+                "item_id": 25,
+                "rating": 1.0
+            },
+            {
+                "item_id": 21,
+                "rating": 4.0
+            }
+        ]
     }
 ]

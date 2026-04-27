@@ -57,6 +57,8 @@ USERS_FILE = os.path.join(BASE_DIR, 'users.json')
 new_interactions_count = 0
 TRAIN_THRESHOLD = 3  # Parametro, luego de estas iteraciones, recalcula
 
+# --- PARÁMETRO DE CALIDAD ---
+RATING_THRESHOLD = 3.5  # Solo consideramos "útil" lo que tenga 4 o 5 estrellas
 
 # --- LÓGICA DEL RECOMENDADOR ---
 
@@ -247,19 +249,21 @@ def recommend(user_id: int, n: int = 5):
     
     history = user.get('history', [])
     
+    # --- FILTRO DE CALIDAD ---
+    # Nos quedamos solo con lo que realmente le gustó al usuario
+    good_history = [item for item in history if item['rating'] >= RATING_THRESHOLD]
+    
     n_model = n - 1 if n > 1 else n
 
-    if not history:
+    # Si no tiene historial O su historial es puras cosas malas, aplicamos Cold Start
+    if not good_history:
+        print(f"DEBUG: Usuario {user_id} sin historial de calidad. Aplicando Cold Start.")
         user_attrs = user.get('attributes', {})
-        prefs = {}
-        if user_attrs and 'preferences' in user_attrs:
-            prefs = user_attrs['preferences']
-        elif user_attrs and isinstance(user_attrs, dict):
-             prefs = user_attrs.get('preferences', {})
-        
+        prefs = user_attrs.get('preferences', {}) if isinstance(user_attrs, dict) else {}
         result_df = recommend_cold_start(prefs, n_model)
     else:
-        result_df = recommend_collaborative(history, n_model)
+        # Si tiene al menos una película buena, el filtrado colaborativo ya tiene de donde agarrar
+        result_df = recommend_collaborative(good_history, n_model)
 
     result_df['is_serendipity'] = False 
 
