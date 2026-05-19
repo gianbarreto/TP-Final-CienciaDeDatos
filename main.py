@@ -60,6 +60,10 @@ TRAIN_THRESHOLD = 3  # Parametro, luego de estas iteraciones, recalcula
 # --- PARÁMETRO DE CALIDAD ---
 RATING_THRESHOLD = 3.5  # Solo consideramos "útil" lo que tenga 4 o 5 estrellas
 
+# Hiperparámetros de ponderación para el algoritmo de Cold Start
+COLD_START_GENRE_WEIGHT = 10.0
+COLD_START_DECADE_WEIGHT = 5.0
+
 # --- LÓGICA DEL RECOMENDADOR ---
 
 def train_model():
@@ -111,11 +115,11 @@ def recommend_cold_start(user_prefs: dict, n: int) -> pd.DataFrame:
         def check_genre_match(movie_genres_list):
             return not set(movie_genres_list).isdisjoint(fav_genres)
         mask_genre = candidates['genres_list'].apply(check_genre_match)
-        candidates.loc[mask_genre, 'score'] += 10
+        candidates.loc[mask_genre, 'score'] += COLD_START_GENRE_WEIGHT
 
     if fav_decades:
         mask_decade = candidates['decade'].isin(fav_decades)
-        candidates.loc[mask_decade, 'score'] += 5
+        candidates.loc[mask_decade, 'score'] += COLD_START_DECADE_WEIGHT
 
     return candidates.sort_values(by='score', ascending=False).head(n)
 
