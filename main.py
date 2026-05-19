@@ -123,11 +123,11 @@ def recommend_cold_start(user_prefs: dict, n: int) -> pd.DataFrame:
 
     return candidates.sort_values(by='score', ascending=False).head(n)
 
-def recommend_collaborative(history: List[dict], n: int) -> pd.DataFrame:
+def recommend_collaborative(history: List[dict], user_prefs: dict, n: int) -> pd.DataFrame:
     global item_similarity_df
     
     if item_similarity_df.empty:
-        return movies_df.sort_values(by='vote_average', ascending=False).head(n)
+        return recommend_cold_start(user_prefs, n)
 
     user_ratings = {item['item_id']: item['rating'] for item in history}
     watched_ids = list(user_ratings.keys())
@@ -267,7 +267,12 @@ def recommend(user_id: int, n: int = 5):
         result_df = recommend_cold_start(prefs, n_model)
     else:
         # Si tiene al menos una película buena, el filtrado colaborativo ya tiene de donde agarrar
-        result_df = recommend_collaborative(good_history, n_model)
+        # 1. Extraemos las preferencias del usuario actual para tenerlas por si falla el colaborativo
+        user_attrs = user.get('attributes', {})
+        prefs = user_attrs.get('preferences', {}) if isinstance(user_attrs, dict) else {}
+        
+        # 2. Se las pasamos a la función como segundo argumento
+        result_df = recommend_collaborative(good_history, prefs, n_model)
 
     result_df['is_serendipity'] = False 
 
