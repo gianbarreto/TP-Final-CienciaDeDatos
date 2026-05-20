@@ -2,17 +2,45 @@ import json
 import pandas as pd
 import os
 from fastapi import FastAPI, HTTPException, BackgroundTasks
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional, Dict, Any
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
+# --- DOMINIOS CERRADOS ---
+ALLOWED_GENRES = {
+    "Action", "Sci-Fi", "Adventure", "Drama", "Romance", "Biography", 
+    "Animation", "Family", "Comedy", "Horror", "Thriller", "Mystery", "Crime"
+}
+ALLOWED_DECADES = {1970, 1980, 1990, 2000, 2010, 2020}
+
 # --- MODELOS DE DATOS (ESTRICTOS) ---
 
 class UserPreferences(BaseModel):
-    # Obligamos a que la lista exista y tenga al menos 1 elemento
-    genres: List[str] = Field(..., min_length=1, description="Debe ingresar al menos un género")
-    decades: List[int] = Field(..., min_length=1, description="Debe ingresar al menos una década")
+    genres: List[str] = Field(..., description="Debe ingresar al menos un género")
+    decades: List[int] = Field(..., description="Debe ingresar al menos una década")
+
+    @field_validator('genres')
+    @classmethod
+    def check_genres(cls, v):
+        if not v or len(v) == 0:
+            raise ValueError('La lista de géneros no puede estar vacía.')
+        
+        invalidos = [g for g in v if g not in ALLOWED_GENRES]
+        if invalidos:
+            raise ValueError(f"Géneros no permitidos: {invalidos}. Opciones válidas: {ALLOWED_GENRES}")
+        return v
+
+    @field_validator('decades')
+    @classmethod
+    def check_decades(cls, v):
+        if not v or len(v) == 0:
+            raise ValueError('La lista de décadas no puede estar vacía.')
+        
+        invalidos = [d for d in v if d not in ALLOWED_DECADES]
+        if invalidos:
+            raise ValueError(f"Décadas no permitidas: {invalidos}. Opciones válidas: {ALLOWED_DECADES}")
+        return v
 
 class UserAttributes(BaseModel):
     preferences: UserPreferences 

@@ -1146,5 +1146,26 @@
                 "rating": 4.0
             }
         ]
+    },
+    {
+        "id": 126,
+        "username": "UltimosTest",
+        "attributes": {
+            "preferences": {
+                "genres": [
+                    "Horror"
+                ],
+                "decades": [
+                    1980
+                ]
+            },
+            "extra": {}
+        },
+        "history": [
+            {
+                "item_id": 85,
+                "rating": 5.0
+            }
+        ]
     }
 ]
