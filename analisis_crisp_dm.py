@@ -1,13 +1,14 @@
 import pandas as pd
 import json
 import matplotlib.pyplot as plt
+import seaborn as sns #  seaborn para el heatmap
 
 # 1. Cargar Datos
 df_movies = pd.read_csv('movies_dataset.csv')
 with open('users.json', 'r') as f:
     users = json.load(f)
 
-# --- GRÁFICO 1: DISTRIBUCIÓN DE GÉNEROS ---
+# --- GRÁFICO DISTRIBUCIÓN DE GÉNEROS ---
 plt.figure(figsize=(10, 6))
 generos = df_movies['genres'].str.split('|', expand=True).stack().value_counts().head(10)
 generos.plot(kind='bar', color='skyblue')
@@ -18,7 +19,7 @@ plt.tight_layout()
 plt.savefig('distribucion_generos.png') # Se guarda como archivo
 print("Archivo 'distribucion_generos.png' generado.")
 
-# --- GRÁFICO 2: HISTORIAL DE COMPRAS ---
+# --- GRÁFICO HISTORIAL DE COMPRAS ---
 plt.figure(figsize=(10, 6))
 compras = [len(u['history']) for u in users]
 plt.hist(compras, bins=range(min(compras), max(compras) + 2), color='salmon', edgecolor='black', align='left')
@@ -31,19 +32,39 @@ plt.savefig('comportamiento_usuarios.png') # Se guarda como archivo
 print("Archivo 'comportamiento_usuarios.png' generado.")
 
 
-# --- GRÁFICO 3: DISTRIBUCIÓN DE RATINGS DEL CATÁLOGO ---
+# --- GRÁFICO MAPA DE CALOR DE ARQUETIPOS VS GÉNEROS ---
+
+# 1. Armamos un diccionario para mapear rápido el ID de peli con sus géneros
+movie_genres = df_movies.set_index('id')['genres'].str.split('|').to_dict()
+
+# 2. Aplanamos los datos para poder cruzarlos
+records = []
+for u in users:
+    arquetipo = u['attributes'].get('archetype', 'Desconocido')
+    for interaccion in u['history']:
+        movie_id = interaccion['item_id']
+        rating = interaccion['rating']
+        
+        # Por cada género que tenga la película, sumamos un registro
+        generos = movie_genres.get(movie_id, [])
+        for g in generos:
+            records.append({'Arquetipo': arquetipo, 'Genero': g, 'Rating': rating})
+
+df_interacciones = pd.DataFrame(records)
+
+# 3. Filtramos solo los géneros principales para que el gráfico no quede gigante
+top_generos = ["Action", "Sci-Fi", "Drama", "Romance", "Animation", "Family", "Horror", "Thriller"]
+df_filtrado = df_interacciones[df_interacciones['Genero'].isin(top_generos)]
+
+# 4. Creamos la matriz pivot: Filas=Arquetipos, Columnas=Géneros, Valores=Promedio de Rating
+matriz_calor = df_filtrado.pivot_table(index='Arquetipo', columns='Genero', values='Rating', aggfunc='mean')
+
+# 5. Dibujamos
 plt.figure(figsize=(10, 6))
-plt.hist(df_movies['vote_average'], bins=10, color='mediumseagreen', edgecolor='black')
-plt.title('Distribución de Ratings en el Catálogo (Fase II)')
-plt.xlabel('Rating (Promedio de Votos)')
-plt.ylabel('Cantidad de Películas')
-
-# Marcamos el promedio que ya calculamos
-promedio_rating = df_movies['vote_average'].mean()
-plt.axvline(promedio_rating, color='red', linestyle='dashed', linewidth=2, label=f'Promedio: {promedio_rating:.2f}')
-
-plt.legend()
-plt.grid(axis='y', linestyle='--', alpha=0.7)
+sns.heatmap(matriz_calor, annot=True, cmap='coolwarm', vmin=1, vmax=5, fmt=".1f", linewidths=.5)
+plt.title('Validación de Simulación: Promedio de Calificaciones por Arquetipo')
+plt.xlabel('Género de la Película')
+plt.ylabel('Arquetipo del Usuario')
 plt.tight_layout()
-plt.savefig('distribucion_ratings.png')
-print("Archivo 'distribucion_ratings.png' generado.")
+plt.savefig('heatmap_arquetipos.png')
+print("Archivo 'heatmap_arquetipos.png' generado.")
